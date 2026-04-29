@@ -1,4 +1,9 @@
-/* --BODY-- */
+/* --HTML & BODY-- */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +11,7 @@ body {
 
 
 /* --HEADERS */
+
 h1{
     font-size: 8em;
     font-weight: bold;
@@ -73,10 +79,71 @@ h6{
     border: 1px solid black;
     scale: 1.2;
 }
+#side-nav-links a.active {
+    background-color: white; 
+    color: black;
+    border: 1px solid black;
+    scale: 1.2;
+}
 
 
 /* --CONTENT */
+
 #content{
-    margin-left: 100px;
+    margin-left: 120px;
+    width: 100%;
+}
+
+.title-divs{
+    margin-bottom: 4rem;
+}
+
+.content-sections{
+    margin-bottom: 12rem;
+    p{
+        font-size: 25px;
+    }
+}
+
+/* CONTACT */
+
+#contact{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 2rem;
+
+    margin-bottom: 8rem;
+
+    p{
+        font-size: 25px;
+        margin: 0;
+    }
+}
+
+
+
+/* FADE-IN ELEMENTS */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(100px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-100px); }
+}
+
+.fade-in {
+  animation: fadeIn linear both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 75%;
+}
+
+.fade-out {
+  animation: fadeOut linear both;
+  animation-timeline: view();
+  animation-range: exit 0% exit 100%;
 }
 
