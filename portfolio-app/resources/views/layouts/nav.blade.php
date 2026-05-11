@@ -7,7 +7,14 @@
         <a href="{{ url('/#contact') }}" >Contact</a>        
         <a href="{{ url('/#about') }}" >About</a>
         <a href="{{ url('/#resume') }}" >Resume</a>
-        <a href="{{ url('/#portfolio') }}" >Portfolio</a>
+        <a href="{{ url('/#portfolio-header') }}" >Portfolio</a>
+
+        <div id="side-portfolio-links">
+            <a href="{{ url('/#wordpress') }}" >WordPress</a>
+            <a href="{{ url('/#laravel') }}" >Laravel</a>
+            <a href="{{ url('/#react') }}" >React</a>
+            <a href="{{ url('/#figma') }}" >Figma</a>
+        </div>
 
 
     </div>
@@ -18,7 +25,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('#side-nav-links a');
-    const sections = document.querySelectorAll('#home, #contact, #about, #resume, #portfolio');
+    const sections = document.querySelectorAll('#home, #contact, #about, #resume, #portfolio, #wordpress, #laravel, #react, #figma');
     
     //detects when an element enters or leaves the viewport
     const observer = new IntersectionObserver(
@@ -40,9 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
         { 
         // adds more precision to when the observer triggers
         // Trigger when just 10% visible
-        threshold: 0.1,
+        threshold: 0,
         // Detection zone starts above viewport
-        rootMargin: '-100px 0px -50% 0px'
+        rootMargin: '0px 0px -85% 0px'
     }
     );
     // Observe each section

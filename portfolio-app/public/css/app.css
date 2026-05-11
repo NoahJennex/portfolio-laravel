@@ -33,12 +33,12 @@ h4{
     margin: 0;
 }
 h5{
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: bold;
     margin: 0;
 }
 h6{
-    font-size: 2em;
+    font-size: 1.25em;
     font-weight: bold;
     margin: 0;
 }
@@ -72,6 +72,8 @@ h6{
     width: 100%;
     padding: 0.75rem;
     border: none;
+    /* invisble border to keep formating for hover effect */
+    border: 1px solid rgba(0, 0, 0, 0);
 }
 #side-nav-links a:hover{
     background-color: white; 
@@ -84,6 +86,12 @@ h6{
     color: black;
     border: 1px solid black;
     scale: 1.2;
+}
+#side-portfolio-links{
+    display: flex; 
+    flex-direction: column; 
+    width: auto;
+    margin-top: 5rem;
 }
 
 
@@ -102,6 +110,82 @@ h6{
     margin-bottom: 12rem;
     p{
         font-size: 25px;
+    }
+}
+
+/* #portfolio-header{
+    margin-bottom: 5rem;
+    height: 15rem;
+} */
+
+/* --Projects-- */
+
+/* #projects {
+    margin-top: 5rem;
+} */
+
+.project{
+    margin-bottom: 5rem;
+}
+
+.project-image{
+    width: 400px;
+    /* max-width: 600px; */
+    margin-top: 1rem;
+    /* margin-bottom: 1rem; */
+}
+
+.project-video{
+    width: 40%;
+    aspect-ratio: 16 / 9;
+    margin-top: 1rem;
+    /* margin-bottom: 1rem; */
+}
+
+.project-link{
+    margin-bottom: 1rem;
+}
+
+/* --LIST-- */
+ul {
+
+    font-size: 20px;
+    
+    li {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.underline-large {
+    width: 55%;
+    height: 5px;
+    background-color: black;
+    margin-top: 1rem;
+    margin-bottom: 7rem;
+}
+.underline-small {
+    width: 40%;
+    height: 5px;
+    background-color: black;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+/* --TABLE-- */
+
+table {
+    margin-top: 1rem;
+    border-collapse: collapse;
+    width: fit-content;
+    
+    td {
+        padding: 0.5rem 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        font-size: 20px;
+    }
+    
+    td:first-child {
+        width: 200px;
+        font-weight: bold;
     }
 }
 
@@ -138,7 +222,7 @@ h6{
 .fade-in {
   animation: fadeIn linear both;
   animation-timeline: view();
-  animation-range: entry 0% entry 75%;
+  animation-range: entry 0% entry 100%;
 }
 
 .fade-out {
